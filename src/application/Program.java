@@ -33,13 +33,20 @@ public class Program {
 		
 		newList.stream().forEach(c -> System.out.println(c));
 		
+//		System.out.println();
+//		
+//		System.out.println("=== TEST 4: seller insert =====");
+//		Seller newSeller = new Seller(null, "Greg", "greg@gmail.com", new Date(), 4000.0, department);
+//		sellerdao.insert(newSeller);
+//		System.out.println("Inserted! New id = " + newSeller.getId());
+		
 		System.out.println();
 		
-		System.out.println("=== TEST 4: seller insert =====");
-		Seller newSeller = new Seller(null, "Greg", "greg@gmail.com", new Date(), 4000.0, department);
-		sellerdao.insert(newSeller);
-		System.out.println("Inserted! New id = " + newSeller.getId());
-		
+		System.out.println("=== TEST 5: seller update =====");
+		seller = sellerdao.findById(1);
+		seller.setName("Martha Waine");
+		sellerdao.update(seller);
+		System.out.println("Update completed");
 		
 	}
 }
