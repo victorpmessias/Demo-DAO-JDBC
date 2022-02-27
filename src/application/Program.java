@@ -17,12 +17,20 @@ public class Program {
 		Seller seller = sellerdao.findById(3);		
 		System.out.println(seller);
 		
+		System.out.println();
 
 		System.out.println("=== TEST 2: seller findByDepartment =====");
 		Department department = new Department(2, null);
 		List<Seller> list = sellerdao.findByDepartment(department);
 		
 		list.stream().forEach(c -> System.out.println(c));
+		
+		System.out.println();
+		
+		System.out.println("=== TEST 3: seller findAll =====");
+		List<Seller> newList = sellerdao.findAll();
+		
+		newList.stream().forEach(c -> System.out.println(c));
 		
 	}
 }
